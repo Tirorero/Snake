@@ -331,14 +331,7 @@ if(fragments[0] < 1){
             
             
           }
-          if(barrier_sl.includes(j) == true && document.getElementById("size").value == 25){
-                
-                
-                
-            clearInterval(varleft)
-            alert("Porażka")
-            return
-            }
+          
             
             if(barrier_sl.includes(j) == true && document.getElementById("size").value == 25){
                 clearInterval(varleft)

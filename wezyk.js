@@ -134,7 +134,7 @@ else if(document.getElementById("size").value == 100){
     fragments_2[0] = fragments_2[1]-40;
 }
 
-if(j<1){
+if(fragments[0]<1){
     clearInterval(varup)
     alert("Porażka")
     return
@@ -446,7 +446,11 @@ if(j<1){
         }else if(document.getElementById("size").value == 1600){
             fragments_2[0] = fragments_2[1]+40;
         }
-          
+        if(fragments[0] > (document.getElementById("size").value)){
+            clearInterval(vardown)
+            alert("Porażka")
+            return
+        }
           
           fragments = fragments_2;
         

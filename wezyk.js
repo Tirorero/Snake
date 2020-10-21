@@ -36,6 +36,8 @@ let fragments = [j,j]
 let fragments_2 = fragments
 function start() {
     j = Math.floor(Math.random() * document.getElementById("size").value + 1)
+    fragments = [j,j]
+    fragments_2 = fragments
     document.getElementById("div" + j).style.background = "darkgreen"
     fragments = [j,j]
     fragments_2 = fragments

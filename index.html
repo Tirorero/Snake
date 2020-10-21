@@ -1,85 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel = "stylesheet" href = "wezyk.css">
-</head>
-<body onload = "map();idiki();">
-    <div id = "div0">
-        
-        
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="wezyk.css" />
+    </head>
 
-        
-        
+    <body onload="map()">
+        <div class="score-container mx-auto">
+            <label for="pointsid" id="labelpoints"> Punkty </label>
+            <span id="pointsid"></span>
+        </div>
 
+        <div id="div0" class="board mx-auto my-2"></div>
 
-    
+        <div class="options-container mx-auto">
+            <div class="controls-container my-3">
+                <div class="w-100 d-flex justify-content-around mb-4">
+                    <button onclick="up()" id="up" class="btn btn-primary">Góra</button>
+                </div>
+                <div class="w-100 d-flex justify-content-around mb-4">
+                    <button onclick="left()" id="left" class="btn btn-primary">Lewo</button>
+                    <button onclick="start()" id="start" class="btn btn-danger">start/Restart</button>
+                    <button onclick="right()" id="right" class="btn btn-primary">Prawo</button>
+                </div>
+                <div class="w-100 d-flex justify-content-around">
+                    <button onclick="down()" id="down" class="btn btn-primary">Dół</button>
+                </div>
+            </div>
 
-    </div>
-    <button onclick = "up()" id = "up">Góra</button>
-    <button onclick = "right()" id = "right">Prawo</button>
-        <button onclick = "down()" id = "down">Dół</button>
-        
-        <button onclick = "left()" id = "left">Lewo</button>
+            <label for="size" id="labelsize"> Rozmiar Mapy </label>
+            <div class="form-group">
+                <select
+                    name="size"
+                    id="size"
+                    class="form-control"
+                    onclick="map();idiki();"
+                >
+                    <option value="25">Mała</option>
+                    <option value="100" selected>Standard</option>
+                    <option value="400">Duża</option>
+                    <option value="1600">Ogromna</option>
+                </select>
+            </div>
 
-        
-
-        <button onclick = "start()" id ="start">start/Restart</button>
-        
-        <br>
-        <label for = "size" id="labelsize">Rozmiar Mapy</label>
-        <select name = "size" id = "size" onclick = "map();idiki();">
-            <option value = "25">Mała
-
-            </option>
-
-            <option value = "100">Standard
-
-            </option>
-
-            <option  value = "400">Duża
-
-            </option>
-
-            <option  value = "1600">Ogromna
-
-            </option>
-
-
-        </select>
-        <label for = "pointsid" id = "labelpoints">Punkty</label>
-        <p id ="pointsid"></p>
-
-        <select name = "speed" id = "speedid" onclick ="speedd()">
-            <option value = 1000>Bardzo Łatwy
-
-            </option>
-
-            <option value = 500>Łatwy
-
-            </option>
-
-            <option  value = 250>Normalny
-
-            </option>
-
-            <option  value = 125>Trudny
-
-            </option>
-
-
-            <option  value = 62> Bardzo Trudny
-
-            </option>
-
-
-
-
-        </select>
-        <label for = "speedid" id = "labelspeed">Poziom Trudności</label>
-    <script src="wezyk.js"></script>
-</body>
+            <label for="speedid" id="labelspeed"> Poziom Trudności </label>
+            <div class="form-group">
+                <select
+                    name="speed"
+                    id="speedid"
+                    class="form-control"
+                    onclick="speedd()"
+                >
+                    <option value="1000">Bardzo Łatwy</option>
+                    <option value="500">Łatwy</option>
+                    <option value="250" selected>Normalny</option>
+                    <option value="125">Trudny</option>
+                    <option value="62">Bardzo Trudny</option>
+                </select>
+            </div>
+        </div>
+        <script src="wezyk.js"></script>
+    </body>
 </html>
-

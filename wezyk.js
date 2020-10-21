@@ -30,16 +30,21 @@ function idiki() {
 
 let j = Math.floor(Math.random() * document.getElementById("size").value + 1)
 let l = Math.floor(Math.random() * document.getElementById("size").value + 1)
+
+let fragments = [j,j]
+
+let fragments_2 = fragments
 function start() {
+    j = Math.floor(Math.random() * document.getElementById("size").value + 1)
+    fragments = [j,j]
+    fragments_2 = fragments
     document.getElementById("div" + j).style.background = "darkgreen"
     
 }
 
 let speed = document.getElementById("speedid").value
 
-let fragments = [j,j]
 
-let fragments_2 = fragments
 
 let barrier_sr = [];
 let barrier_sl = [];

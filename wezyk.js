@@ -507,7 +507,7 @@ if(fragments[0] < 1){
         }, speed)
       }}
 
-      window.addEventListener("keyup", function(event) {
+      window.addEventListener("keydown", function(event) {
         
         if (event.keyCode === 38) {
           
@@ -516,7 +516,7 @@ if(fragments[0] < 1){
           document.getElementById("up").click();
         }
       }); 
-      window.addEventListener("keyup", function(event) {
+      window.addEventListener("keydown", function(event) {
         
         if (event.keyCode === 39) {
           
@@ -525,7 +525,7 @@ if(fragments[0] < 1){
           document.getElementById("right").click();
         }
       }); 
-      window.addEventListener("keyup", function(event) {
+      window.addEventListener("keydown", function(event) {
         
         if (event.keyCode === 40) {
           
@@ -534,7 +534,7 @@ if(fragments[0] < 1){
           document.getElementById("down").click();
         }
       }); 
-      window.addEventListener("keyup", function(event) {
+      window.addEventListener("keydown", function(event) {
         
         if (event.keyCode === 37) {
           

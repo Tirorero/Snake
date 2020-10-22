@@ -47,6 +47,8 @@ let fragments = [j, j];
 
 let fragments_2 = fragments;
 
+let points = 0;
+
 function start() {
     j = Math.floor(Math.random() * document.getElementById("size").value + 1);
     fragments = [j, j];
@@ -54,6 +56,7 @@ function start() {
     document.getElementById("div" + j).style.background = "darkgreen";
     fragments = [j, j];
     fragments_2 = fragments;
+    points = 0;
 }
 
 let speed = document.getElementById("speedid").value;
@@ -92,7 +95,7 @@ for (let i = 1; i <= 1561; i += 40) {
     barrier_el.push(i);
 }
 
-let points = 0;
+
 var varup;
 var vardown;
 var varright;

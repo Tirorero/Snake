@@ -8,10 +8,14 @@ async function getUserName() {
 async function getLastDate() {
     let dateResponse = await fetch("https://api.github.com/repos/Tirorero/Snake")
     let dateData = await dateResponse.json()
-     return dateData
+     let formattedData = new Date(dateData.updated_at);
+     formattedData.toTimeString
+     console.log(formattedData)
+     return formattedData
+
 }
 getUserName().then(nameData => document.getElementById("autor").innerHTML = "Made by:"+ " " + nameData.login)
-getLastDate().then(dateData => document.getElementById("dateid").innerHTML = ("Date of last change:"+ " " + dateData.updated_at).substr(0,31))
+getLastDate().then(test => document.getElementById("dateid").innerHTML = "Date of last change:"+ " " + test)
 
 
 

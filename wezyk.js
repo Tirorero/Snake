@@ -1,3 +1,20 @@
+
+async function getUserName() {
+    let nameResponse = await fetch("https://api.github.com/users/Tirorero")
+    let nameData = await nameResponse.json()
+     return nameData
+}
+
+async function getLastDate() {
+    let dateResponse = await fetch("https://api.github.com/repos/Tirorero/Snake")
+    let dateData = await dateResponse.json()
+     return dateData
+}
+getUserName().then(nameData => document.getElementById("autor").innerHTML = "Made by:"+ " " + nameData.login)
+getLastDate().then(dateData => document.getElementById("dateid").innerHTML = ("Date of last change:"+ " " + dateData.updated_at).substr(0,31))
+
+
+
 function map() {
     document.getElementById("div0").textContent = "";
 
